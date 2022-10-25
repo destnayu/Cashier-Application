@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9fdc3f55-3455-4493-9030-f647f676db4d">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     karyawan.`id_karyawan` AS karyawan_id_karyawan,
+     karyawan.`nama_karyawan` AS karyawan_nama_karyawan,
+     karyawan.`alamat_karyawan` AS karyawan_alamat_karyawan,
+     karyawan.`jenis_kelamin` AS karyawan_jenis_kelamin,
+     karyawan.`jabatan` AS karyawan_jabatan,
+     karyawan.`no_hp` AS karyawan_no_hp
+FROM
+     `karyawan` karyawan]]>
+	</queryString>
+	<field name="karyawan_id_karyawan" class="java.lang.String"/>
+	<field name="karyawan_nama_karyawan" class="java.lang.String"/>
+	<field name="karyawan_alamat_karyawan" class="java.lang.String"/>
+	<field name="karyawan_jenis_kelamin" class="java.lang.String"/>
+	<field name="karyawan_jabatan" class="java.lang.String"/>
+	<field name="karyawan_no_hp" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="136" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="f7dc5137-a1d5-4e5b-953a-1602056081d8" style="Title" x="179" y="10" width="382" height="62"/>
+				<textElement verticalAlignment="Middle">
+					<font size="36" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[DUA MAHKOTA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5c5cee44-a5b5-469d-82e9-519ee3d9b9c3" x="159" y="94" width="382" height="42"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Rainbow Alamanda Jl. Alamanda Regency Raya, Karang Satria, Tambun Utara, Kab. Bekasi, Jawa Barat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="466e7a1a-f08c-4795-bbbc-3202b5e64f47" style="SubTitle" x="171" y="72" width="234" height="22"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="16" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[LAPORAN DATA KARYAWAN]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="eb5abce4-e1e6-497a-8597-b40185f3bd6c" x="10" y="19" width="325" height="101"/>
+				<imageExpression><![CDATA["D:\\KULIAH\\SEMESTER 8\\TUGAS AKHIR\\Aplikasi\\Mahkota\\src\\laporan\\logo.png"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement uuid="29f59c25-70b5-40cc-999a-ec8b6bb4aa32" x="-21" y="130" width="597" height="1"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="19" splitType="Stretch">
+			<line>
+				<reportElement uuid="7a2a530a-b177-4838-be82-2e5f5caf85f1" positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="d5504105-1bcd-4f63-b5cb-8fd66ed967e0" style="Column header" x="0" y="0" width="74" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[Id Karyawan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="485d804d-2d2c-4a13-beaa-c8c399316ad4" style="Column header" x="75" y="0" width="96" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[Nama Karyawan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b390e29b-cb23-4149-bb3a-47cfd3a8f43d" style="Column header" x="176" y="0" width="123" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[Alamat Karyawan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ce232f61-8f01-421d-b3ec-8e83e3d4a450" style="Column header" x="301" y="0" width="82" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[Jenis Kelamin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6371234c-0826-4499-8519-2c4201be4d57" style="Column header" x="392" y="0" width="64" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[Jabatan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="28595c60-5922-4173-92a6-087f5b6eda26" style="Column header" x="460" y="0" width="92" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[No. HP]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<frame>
+				<reportElement uuid="168e1007-8595-4b00-b6b2-643765563b08" style="Row" mode="Opaque" x="0" y="0" width="555" height="15"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="a5b6c4f0-0681-4976-aa64-4cd63eaf7de4" style="Detail" x="0" y="0" width="74" height="15"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{karyawan_id_karyawan}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="79a91a27-f67a-4afa-b035-414da979aeaf" style="Detail" x="75" y="0" width="96" height="15"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{karyawan_nama_karyawan}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="bb4764a2-140e-43f3-87af-6c934ab60580" style="Detail" x="176" y="0" width="123" height="15"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{karyawan_alamat_karyawan}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="01fbab60-2adc-4b7a-880e-ff2683e622cc" style="Detail" x="301" y="0" width="82" height="15"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{karyawan_jenis_kelamin}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="744b61d6-c580-4322-b190-e62e98462597" style="Detail" x="392" y="0" width="64" height="15"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{karyawan_jabatan}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="ce10cdb1-43ff-4f7d-8358-9aec096fd49c" style="Detail" x="460" y="0" width="92" height="15"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{karyawan_no_hp}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="88" splitType="Stretch">
+			<line>
+				<reportElement uuid="8b152e45-3fb2-44d7-b80a-e89ce4229b75" positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="5c25a05e-902c-4b25-8e88-e17f7cdb6d9d" x="380" y="11" width="101" height="20"/>
+				<textElement/>
+				<text><![CDATA[Bekasi,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6a3f8314-4fdb-4519-bb0d-bb441186f06b" x="425" y="31" width="40" height="20"/>
+				<textElement/>
+				<text><![CDATA[Pemilik]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6a3f8314-4fdb-4519-bb0d-bb441186f06b" x="434" y="68" width="22" height="20"/>
+				<textElement/>
+				<text><![CDATA[Meti]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="733f7da7-a80c-481d-a15b-b65b8c5ab6e5" x="418" y="10" width="134" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement uuid="611e862d-3e99-4c38-894d-a9371324a9b9" mode="Opaque" x="-21" y="1" width="597" height="24" forecolor="#D0B48E" backcolor="#F2EBDF"/>
+				<textField evaluationTime="Report">
+					<reportElement uuid="8bb5a0bd-7a1a-4307-9ffd-ec804c59de88" style="Column header" x="533" y="0" width="40" height="20" forecolor="#736343"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="5443fc71-68b2-454d-a138-5b883483f19f" style="Column header" x="453" y="0" width="80" height="20" forecolor="#736343"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

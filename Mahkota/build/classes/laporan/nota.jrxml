@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="576" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2bc23e27-d35c-45ec-902d-e2645db0d5cd">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="65"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<parameter name="id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from transaksi where faktur = $P{id}]]>
+	</queryString>
+	<field name="faktur" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tgl" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_pembeli" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_pembeli" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_barang" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_barang" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="harga_barang" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jumlah" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="total_harga" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bayar" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="kembali" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="92" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="f7dc5137-a1d5-4e5b-953a-1602056081d8" style="Title" x="179" y="-12" width="382" height="62"/>
+				<textElement verticalAlignment="Middle">
+					<font size="36" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[DUA MAHKOTA]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="eb5abce4-e1e6-497a-8597-b40185f3bd6c" x="0" y="-12" width="325" height="101"/>
+				<imageExpression><![CDATA["D:\\KULIAH\\SEMESTER 8\\TUGAS AKHIR\\Aplikasi\\Mahkota\\src\\laporan\\logo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="5c5cee44-a5b5-469d-82e9-519ee3d9b9c3" x="164" y="50" width="382" height="42"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Rainbow Alamanda Jl. Alamanda Regency Raya, Karang Satria, Tambun Utara, Kab. Bekasi, Jawa Barat]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="262" splitType="Stretch">
+			<line>
+				<reportElement uuid="bc0e81a7-b53f-4b47-9d64-c1497be2297e" positionType="FixRelativeToBottom" x="0" y="-3" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="b7719ea3-dd58-46ee-8007-ec9922eeb94d" style="Column header" x="8" y="32" width="61" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[Faktur]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7eb55ce0-9898-4ea2-a36b-306253c81e1e" style="Column header" x="7" y="60" width="61" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[Tanggal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="defd5cd2-bf94-4397-8d7b-87fff3f8d181" style="Column header" x="8" y="85" width="85" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[Nama Pembeli]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="09fdc242-0874-4b75-9972-187f6604946d" style="Column header" x="8" y="110" width="85" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[Nama Barang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9e56285a-48b0-4a7d-aa9b-eb8b22e79aed" style="Column header" x="8" y="138" width="89" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[Harga Barang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a940f9de-8db2-4a86-b2c1-543d63a71e2b" style="Column header" x="8" y="165" width="61" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[Jumlah]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="52d15b53-9f33-4285-9d94-b15aa458818b" style="Column header" x="276" y="191" width="76" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[Total Harga]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8ac5510f-514e-4ed1-a024-581f8042242f" style="Column header" x="276" y="219" width="61" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[Bayar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0b550a29-de87-4a38-b65e-8d4fcf83ae4b" style="Column header" x="276" y="246" width="61" height="15" forecolor="#736343"/>
+				<textElement/>
+				<text><![CDATA[Kembali]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="30ad57bd-6525-470b-86f0-713b49303fed" style="Detail" x="432" y="218" width="118" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{kembali}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="b585ac0e-5e73-45db-b752-a27d9606102b" style="Detail" x="432" y="247" width="118" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{bayar}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="9a5f362e-7a03-4d9e-9c08-cb55e33c232e" style="Detail" x="432" y="191" width="118" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{total_harga}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="adc2d962-ae04-436f-9dea-587865bea47c" style="Detail" x="164" y="165" width="61" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{jumlah}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="39f98455-ab88-4fd8-8853-b494d1ae4071" style="Detail" x="164" y="138" width="118" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{harga_barang}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="212939f0-54a3-4990-9e1c-b86a2cc33dc4" style="Detail" x="164" y="110" width="118" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{nama_barang}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="69acde1c-762e-437e-830d-1f48a39153da" style="Detail" x="164" y="85" width="118" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{nama_pembeli}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="1317378c-afe5-4b21-b1ba-f7283af64bae" style="Detail" x="164" y="60" width="118" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{tgl}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="b61ec374-73ff-4a4f-993b-b008905faed7" style="Detail" x="164" y="32" width="61" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{faktur}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="466e7a1a-f08c-4795-bbbc-3202b5e64f47" style="SubTitle" x="0" y="0" width="154" height="22"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="16" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[NOTA PENJUALAN]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="bc0e81a7-b53f-4b47-9d64-c1497be2297e" positionType="FixRelativeToBottom" x="1" y="23" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="bc0e81a7-b53f-4b47-9d64-c1497be2297e" positionType="FixRelativeToBottom" x="-20" y="184" width="601" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField pattern="dd/MM/yyyy HH.mm.ss">
+				<reportElement uuid="d27f0b41-2cc1-4fe4-a1d2-1f6842b656c3" x="450" y="4" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<frame>
+				<reportElement uuid="609e3bed-9ecb-4f94-b5e9-adca8a052869" style="Row" mode="Opaque" x="0" y="0" width="555" height="15"/>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="4" splitType="Stretch">
+			<line>
+				<reportElement uuid="4b62b38e-603f-4fd4-88b0-bd633910dd1c" positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="33" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="5fb46f1a-a391-4c88-aaa3-28d6ec4e527a" x="225" y="7" width="100" height="18"/>
+				<textElement/>
+				<text><![CDATA[** TERIMA KASIH **]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="7bd35fda-9967-492a-b2d0-bf72b9d452e5" x="-20" y="-1" width="601" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="7bd35fda-9967-492a-b2d0-bf72b9d452e5" x="-24" y="27" width="601" height="1"/>
+			</line>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
