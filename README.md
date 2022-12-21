@@ -33,6 +33,8 @@
   <p>Select 'dua.sql' on folder Mahkota</p>
   <p>Scroll down and click button Go</p>
   <p>After import database success, Mahkota.jar can be run</p>
+  
+  https://youtu.be/2LH4JhefamY
 
 # =================================
   Username: admin | password: admin
