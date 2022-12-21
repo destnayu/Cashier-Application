@@ -24,18 +24,20 @@
 </p>
 
 ## 🏎️ How to Running Program
-  <p>To distribute this project, extract zip the Mahkota.zip folder (including the lib folder) and distribute the ZIP file.</p
-  <p>Activate XAMPP for the first, click button Start on Apache, MySQL and FileZilla</p>
-  <p>Click button Admin on MySQL</p>
-  <p>Create a new database with database name 'dua'</p>
-  <p>Select database 'dua', click Import menu</p>
-  <p>Click Choose File</p>
-  <p>Select 'dua.sql' on folder Mahkota</p>
-  <p>Scroll down and click button Go</p>
-  <p>After import database success, Mahkota.jar can be run</p>
+  <p>* To distribute this project, extract zip the Mahkota.zip folder (including the lib folder) and distribute the ZIP file.</p
+  <p>* Activate XAMPP for the first, click button Start on Apache, MySQL and FileZilla</p>
+  <p>* Click button Admin on MySQL</p>
+  <p>* Create a new database with database name 'dua'</p>
+  <p>* Select database 'dua', click Import menu</p>
+  <p>* Click Choose File</p>
+  <p>* Select 'dua.sql' on folder Mahkota</p>
+  <p>* Scroll down and click button Go</p>
+  <p>* After import database success, Mahkota.jar can be run</p>
   
-  https://youtu.be/2LH4JhefamY
+## Details Running Program
+<a href="https://youtu.be/2LH4JhefamY" target="blank"><img src="https://www.vectorlogo.zone/logos/youtube/youtube-ar21.svg"> </a>
+  
 
-# =================================
+# ==========================
   Username: admin | password: admin
-# =================================
+# ==========================
